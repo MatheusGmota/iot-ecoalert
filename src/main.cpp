@@ -39,6 +39,9 @@ void setup() {
   Serial.begin(115200);
   dht.begin();
 
+  pinMode(LED1, OUTPUT);
+  pinMode(BUZZERPIN, OUTPUT);
+
   ledcSetup(0, 2000, 8);
   ledcAttachPin(BUZZERPIN, 0);
 
@@ -48,8 +51,6 @@ void setup() {
 
 void loop() {
   thing.handle(); // Mantém a conexão com o Thinger.io e processa eventos
-  pinMode(LED1, OUTPUT);
-  pinMode(BUZZERPIN, OUTPUT);
 
   // === Leitura do Sensor DHT22 ===
   float temp = dht.readTemperature();
@@ -112,11 +113,12 @@ void loop() {
   }
   data["location"] = "Rio Tietê";
 
-  // Condição de temperatura anormal
+  // Condição de temperatura e umidade anormal
   if (temp > 39 || temp < -40 || hum > 70 || hum < 20) {
     ledcWrite(0, 128);
     digitalWrite(LED1, HIGH);
     delay(300);
+    ledcWrite(0,0);
     digitalWrite(LED1, LOW);
     delay(300);
   } else {
