@@ -18,8 +18,8 @@
       "type": "wokwi-resistor",
       "id": "r1",
       "top": 99.95,
-      "left": -48,
-      "attrs": { "value": "500" }
+      "left": -67.2,
+      "attrs": { "value": "330" }
     }
   ],
   "connections": [
@@ -35,7 +35,8 @@
     [ "bz1:1", "esp:GND.1", "black", [ "v0" ] ],
     [ "bz1:2", "esp:14", "#8f4814", [ "v0" ] ],
     [ "led1:C", "esp:GND.1", "black", [ "v0" ] ],
-    [ "r1:1", "led1:A", "orange", [ "h-28.8", "v-153.6" ] ]
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "esp:33", "green", [ "v0" ] ]
   ],
   "dependencies": {}
 }
