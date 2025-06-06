@@ -158,5 +158,5 @@ void loop() {
   }
   http.end();
 
-  delay(5000); // Espera 5 segundos antes da próxima leitura/envio
+  delay(60000); // Espera 1 minuto antes da próxima leitura/envio
 }
