@@ -111,3 +111,16 @@ http.begin(JAVA_API_URL);
 http.POST(jsonBody);
 ```
 - Os dados também são enviados em formato JSON para uma API externa, simulando uma integração com backend.
+
+## Fluxos com Node-RED
+Este projeto não utiliza o Node-RED. Toda a comunicação entre dispositivos, gateway e dashboards é feita diretamente via ESP32 e integração com Thinger.io e API externa.
+
+## 📷 Ilustrações do Projeto
+
+### Circuito no Simulador Wokwi
+![image](https://github.com/user-attachments/assets/988550e4-9b3a-45b8-86fc-88d76ce779a6)
+
+### Monitor Serial da Simulação
+![image](https://github.com/user-attachments/assets/2b4b76e0-e711-4471-8b06-cee1172d56c2)
+
+
