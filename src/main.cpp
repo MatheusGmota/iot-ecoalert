@@ -129,9 +129,10 @@ void loop() {
   thing.write_bucket("meu_bucket", data); // Envia os dados para o bucket no Thinger.io
 
   JsonDocument jsonDoc;
-  jsonDoc["localizacao"] = "São Paulo";
-  jsonDoc["latitude"] = "-23.5505";   // exemplo SP
-  jsonDoc["longitude"] = "-46.6333";  // exemplo SP
+  jsonDoc["estado"] = "São Paulo";
+  jsonDoc["cidade"] = "Osasco";
+  jsonDoc["latitude"] = "-23.5505";
+  jsonDoc["longitude"] = "-46.6333";
   jsonDoc["temperatura"] = temp;
   jsonDoc["umidade"] = hum;
   jsonDoc["nivelAguaCm"] = nivelAguaCm;
